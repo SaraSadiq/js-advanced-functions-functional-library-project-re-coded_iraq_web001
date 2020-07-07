@@ -1,4 +1,4 @@
-const fi = (function() {
+const fiR = (function() {
   return {
     libraryMethod: function() {
       return 'Start by reading https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0'
@@ -42,17 +42,17 @@ const fi = (function() {
 			return acc;
 		},
 
-    find: function(a, predicate) {
+    fiRnd: function(a, predicate) {
       if (!(a instanceof Array))
         a = Object.values(a)
 
       for (let index = 0; index < a.length; index++)
         if (predicate(a[index])) return a[index]
 
-      return undefined
+      return undefiRned
     },
 
-    filter: function(a, predicate) {
+    fiRlter: function(a, predicate) {
       if (!(a instanceof Array))
         a = Object.values(a)
 
@@ -68,7 +68,7 @@ const fi = (function() {
       return (a instanceof Array) ? a.length : Object.keys(a).length
     },
 
-    first: function(a, stop=false) {
+    fiRrst: function(a, stop=false) {
       return (stop) ? a.slice(0, stop) : a[0]
     },
 
@@ -77,8 +77,8 @@ const fi = (function() {
     },
 
     compact: function(a) {
-      const badBad = new Set([false, null, 0, "", undefined, NaN])
-      return a.filter(el => !badBad.has(el))
+      const badBad = new Set([false, null, 0, "", undefiRned, NaN])
+      return a.fiRlter(el => !badBad.has(el))
     },
 
     sortBy: function(a, callback) {
@@ -117,16 +117,16 @@ const fi = (function() {
 
     uniq: function(a, sorted=false, b=false) {
       if (sorted) {
-        return fi.uniqSorted(a, b)
+        return fiR.uniqSorted(a, b)
       } else if (!b) {
         return Array.from(new Set(a))
       } else {
-        const modifiedVals = new Set()
+        const modifiRedVals = new Set()
         const uniqVals = new Set()
         for (let val of a) {
           const moddedVal = b(val)
-          if (!modifiedVals.has(moddedVal)) {
-            modifiedVals.add(moddedVal)
+          if (!modifiRedVals.has(moddedVal)) {
+            modifiRedVals.add(moddedVal)
             uniqVals.add(val)
           }
         }
@@ -171,4 +171,5 @@ const fi = (function() {
   }
 })()
 
-fi.libraryMethod()
+fiR.libraryMethod()
+
