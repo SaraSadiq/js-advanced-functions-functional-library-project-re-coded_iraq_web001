@@ -172,4 +172,3 @@ const fiR = (function() {
 })()
 
 fiR.libraryMethod()
-
